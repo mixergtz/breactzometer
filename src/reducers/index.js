@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import { SELECT_LOCATION, REQUEST_INFO, RECEIVE_INFO } from '../actions/index.js'
 import { slugify } from '../utils/utils.js'
 
-function selectedCity (state = 'Medellin', action) {
+function selectedCity (state = '', action) {
   switch (action.type) {
     case SELECT_LOCATION:
       return action.location
@@ -13,7 +13,12 @@ function selectedCity (state = 'Medellin', action) {
 
 function locations (state = {
   name: '',
-  isFetching: false
+  isFetching: false,
+  locationData: {
+    color: "none",
+    quality: "Loading data"
+  },
+  error: ''
 }, action) {
   switch (action.type) {
     case REQUEST_INFO:

@@ -11,7 +11,8 @@
     "redux-thunk": "2.2.0",
     "redux-logger": "2.7.4",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "babel-polyfill": "6.22.0"
   },
   "scripts": {
     "start": "react-scripts start",
