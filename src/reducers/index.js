@@ -15,7 +15,7 @@ function locations (state = {
   name: '',
   isFetching: false,
   locationData: {
-    color: "none",
+    color: "#eee",
     quality: "No data"
   },
   error: ''

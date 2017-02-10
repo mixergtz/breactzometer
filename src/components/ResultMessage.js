@@ -10,13 +10,13 @@ const ResultMessage = ({ selectedCity, previousLocations }) => {
     return (
       <div>
         {resultsError ? (
-          <span style={{ backgroundColor: "red" }}>
+          <div className="alert" style={{ backgroundColor: "#FB8686" }}>
             {resultsError}
-          </span>
+          </div>
           ) : (
-          <span style={{ backgroundColor: locationResults.locationData.color }}>
+          <div className="alert" style={{ backgroundColor: locationResults.locationData.color }}>
             {locationResults.locationData.quality} for {selectedCity}
-          </span>
+          </div>
         )}
       </div>
     )

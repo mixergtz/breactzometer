@@ -9,8 +9,14 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        <SearchResults />
-        <PreviousResults />
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+              <SearchResults />
+              <PreviousResults />
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
