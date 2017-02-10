@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import ResultsTable from '../components/ResultsTable'
+import { clearState } from '../utils/localStorage'
 
 const mapStateToProps = (state) => {
   return {
@@ -7,8 +8,18 @@ const mapStateToProps = (state) => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onClick: () => {
+      clearState()
+      location.reload();
+    }
+  }
+}
+
 const PreviousResults = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(ResultsTable)
 
 export default PreviousResults

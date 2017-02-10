@@ -1,11 +1,14 @@
 import React from 'react'
 import { slugify } from '../utils/utils'
 
-const ResultsTable = ({ previousFiveLocations }) => {
+const ResultsTable = ({ onClick, previousFiveLocations }) => {
   if(previousFiveLocations.length > 0){
     return (
       <div>
-        <h2> Last Searches </h2>
+        <h2>
+          Last Searches
+          <span><small><a href="#" onClick={onClick}> (Clear)</a></small></span>
+        </h2>
         <table className="table">
           <thead>
             <tr>
