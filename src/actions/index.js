@@ -3,6 +3,11 @@ import fetch from 'isomorphic-fetch'
 export const SELECT_LOCATION = 'SELECT_LOCATION'
 export const REQUEST_INFO = 'REQUEST_INFO'
 export const RECEIVE_INFO = 'RECEIVE_INFO'
+export const ENABLE_SEARCH = 'ENABLE_SEARCH'
+
+export function enableSearch (value) {
+  return { type: ENABLE_SEARCH, value }
+}
 
 export function selectLocation (location) {
   return { type: SELECT_LOCATION, location }

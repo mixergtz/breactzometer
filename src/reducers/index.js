@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { SELECT_LOCATION, REQUEST_INFO, RECEIVE_INFO } from '../actions/index.js'
+import { SELECT_LOCATION, REQUEST_INFO, RECEIVE_INFO, ENABLE_SEARCH } from '../actions/index.js'
 import { slugify } from '../utils/utils.js'
 
 function selectedCity (state = '', action) {
@@ -58,8 +58,19 @@ function previousLocations (state = {}, action) {
   }
 }
 
+function searchDisabled (state = true, action) {
+  switch (action.type) {
+    case ENABLE_SEARCH:
+      return action.value
+    default:
+      return state
+  }
+}
+
+
 const rootReducer = combineReducers({
   selectedCity,
+  searchDisabled,
   previousLocations
 })
 
